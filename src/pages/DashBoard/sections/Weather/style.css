@@ -1,0 +1,97 @@
+.weather {
+  background-color: #ffffff;
+  border-radius: 5px;
+  height: 173px;
+  left: 246px;
+  overflow: hidden;
+  position: absolute;
+  top: 91px;
+  width: 370px;
+}
+
+.weather .overlap-5 {
+  height: 108px;
+  left: 11px;
+  position: absolute;
+  top: 24px;
+  width: 218px;
+}
+
+.weather .overlap-6 {
+  height: 101px;
+  left: 16px;
+  position: absolute;
+  top: 0;
+  width: 202px;
+}
+
+.weather .img {
+  height: 8px;
+  left: 97px;
+  position: absolute;
+  top: 11px;
+  width: 14px;
+}
+
+.weather .weather-icon {
+  height: 83px;
+  left: 125px;
+  position: absolute;
+  top: 18px;
+  width: 77px;
+}
+
+.weather .weather-topic {
+  color: #212121;
+  font-family: "Inter", Helvetica;
+  font-size: 23px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  width: 148px;
+}
+
+.weather .weather-data {
+  color: #212121;
+  font-family: "Inter", Helvetica;
+  font-size: 40px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 52px;
+  width: 130px;
+}
+
+.weather .wind-speed {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  left: 237px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 37px;
+  width: 64px;
+}
+
+.weather .wind-volume {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  left: 238px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 116px;
+  width: 64px;
+}
