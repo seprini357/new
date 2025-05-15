@@ -9,7 +9,7 @@
   width: 370px;
 }
 
-.weather .overlap-5 {
+.overlap-5 {
   height: 108px;
   left: 11px;
   position: absolute;
@@ -17,7 +17,7 @@
   width: 218px;
 }
 
-.weather .overlap-6 {
+.overlap-6 {
   height: 101px;
   left: 16px;
   position: absolute;
@@ -25,7 +25,7 @@
   width: 202px;
 }
 
-.weather .img {
+.img {
   height: 8px;
   left: 97px;
   position: absolute;
@@ -33,15 +33,14 @@
   width: 14px;
 }
 
-.weather .weather-icon {
+.weather-icon {
   height: 83px;
   left: 125px;
   position: absolute;
   top: 18px;
   width: 77px;
 }
-
-.weather .weather-topic {
+.weather-topic {
   color: #212121;
   font-family: "Inter", Helvetica;
   font-size: 23px;
@@ -52,23 +51,30 @@
   position: absolute;
   top: 0;
   width: 148px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
 }
 
-.weather .weather-data {
+.weather-data {
   color: #212121;
   font-family: "Inter", Helvetica;
   font-size: 40px;
   font-weight: 400;
-  left: 0;
+  left: 125px;
+  top: 18px;
+  width: 120px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
   text-align: center;
-  top: 52px;
-  width: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.weather .wind-speed {
+.wind-speed {
   color: #000000;
   font-family: "Inter", Helvetica;
   font-size: 20px;
@@ -82,16 +88,51 @@
   width: 64px;
 }
 
-.weather .wind-volume {
-  color: #000000;
-  font-family: "Inter", Helvetica;
-  font-size: 20px;
-  font-weight: 400;
-  left: 238px;
-  letter-spacing: 0;
-  line-height: normal;
+.weather-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
   position: absolute;
-  text-align: center;
-  top: 116px;
-  width: 64px;
+  left: -5px;
+  top: 50px;
+}
+
+.temperature {
+  font-size: 35px;
+  font-weight: 700;
+  color: #212121;
+  margin-bottom: 8px;
+}
+
+.city-name {
+  font-size: 30px;
+  font-weight: 700;
+  color: #212121;
+  margin-top: 0;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  left: 40px;
+  top: 34px;
+  gap: 8px;
+}
+
+.city-temp-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.wind-speed-inline {
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  margin-left: 70px;
+  margin-bottom: 50px;
 }

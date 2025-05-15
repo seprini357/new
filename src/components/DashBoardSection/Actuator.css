@@ -9,7 +9,7 @@
   width: 393px;
 }
 
-/* ✅ 제목 + 스위치 수평 정렬 */
+/* 제목 + 스위치 수평 정렬 */
 .actuator-header {
   display: flex;
   justify-content: space-between;
@@ -26,7 +26,7 @@
   font-weight: 600;
 }
 
-/* ✅ 슬라이드 + 텍스트 묶음 */
+/* 슬라이드 + 텍스트 묶음 */
 .toggle-wrapper {
   display: flex;
   flex-direction: column;

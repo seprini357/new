@@ -1,8 +1,8 @@
 import React from "react";
-import useWeather from "../../../../hooks/useWeather";
+import useWeather from '../../hooks/useWeather';
 import "./Weather.css";
 
-const CITY = "Seoul"; // 원하는 도시명으로 변경 가능
+const CITY = "Gyeongsan"; 
 
 const Weather = () => {
   const { weather } = useWeather(CITY);
@@ -10,14 +10,13 @@ const Weather = () => {
   // 값이 없으면 '-'로 표시
   const temp = weather && weather.main ? `${Math.round(weather.main.temp)}°C` : "-";
   const wind = weather && weather.wind ? `${weather.wind.speed} m/s` : "-";
-  const wave = "-"; // OpenWeather에는 wave 정보가 없음
 
   return (
     <div className="weather">
-      <div className="overlap-5">
-        <div className="overlap-6">
-          <div className="weather-topic">현재기온</div>
-          <div className="weather-info">
+    <div className="overlap-5">
+      <div className="overlap-6">
+        <div className="weather-topic">현재기온</div>
+        <div className="weather-info">
             <div className="city-temp-row">
               <span className="city-name">{CITY}</span>
               <span className="temperature">{temp}</span>
@@ -26,9 +25,8 @@ const Weather = () => {
           </div>
         </div>
       </div>
-      <div className="wind-volume">풍랑: {wave}</div>
     </div>
   );
 };
 
-export default Weather; 
+export default Weather;

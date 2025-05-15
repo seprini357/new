@@ -1,0 +1,22 @@
+.weather-data {
+  position: absolute;
+  left: 40px;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.temperature {
+  font-size: 40px;
+  font-weight: 700;
+  color: #212121;
+  margin-bottom: 8px;
+}
+
+.city-name {
+  font-size: 18px;
+  font-weight: 400;
+  color: #555;
+  margin-top: 0;
+} 

@@ -1,10 +1,10 @@
 import React from "react";
-import { Actuator } from "./sections/Actuator";
+import Actuator from "../../components/DashBoardSection/Actuator";
 import { Ai } from "./sections/Ai";
 import { Energy } from "./sections/Energy";
 import { Soil } from "./sections/Soil";
-import { UsageStatus } from "./sections/UsageStatus";
-import { Weather } from "./sections/Weather";
+import UsageStatus from "../../components/DashBoardSection/UseStatus";
+import Weather from "../../components/DashBoardSection/Weather";
 import "./style.css";
 
 const DashBoard = ({ sensorData }) => {

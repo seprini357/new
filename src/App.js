@@ -8,7 +8,6 @@ import Sidebar from "./components/Sidebar";
 import DataStatistics from './pages/DataStatistics';
 import useSensorMonitor from './hooks/useSensorMonitor';
 import usePushNotification from './hooks/usePushNotification';
-
 // 로그인/회원가입/비밀번호찾기/채팅 페이지
 import { Screen } from './pages/Screen'; // 로그인
 import { ScreenScreen } from './pages/ScreenScreen'; // 회원가입
@@ -20,7 +19,7 @@ function App() {
   const { sensorData, loading } = useSensorMonitor(warningNotification);
   const location = useLocation();
 
-  // ✅ 로그인/회원가입/비번찾기/채팅은 전체화면 단독 렌더링
+  // 로그인/회원가입/비번찾기/채팅은 전체화면 단독 렌더링
   const isAuthPage = ["/", "/screen", "/screen2", "/findpassword", "/chat"].includes(location.pathname);
 
   if (loading) return <div>Loading...</div>;
@@ -36,7 +35,7 @@ function App() {
     );
   }
 
-  // ✅ 그 외 페이지는 Navbar + Sidebar 포함된 레이아웃으로 렌더링
+  // 그 외 페이지는 Navbar + Sidebar 포함된 레이아웃으로 렌더링
   return (
     <div>
       <Navbar />
