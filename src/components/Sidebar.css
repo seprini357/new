@@ -11,6 +11,9 @@
   flex-shrink: 0;
   transition: width 0.3s;
 }
+.sidebar--dashboard{
+  height: 150vh !important;
+}
 
 @media (max-width: 1024px) {
   .sidebar {

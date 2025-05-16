@@ -23,6 +23,8 @@ function App() {
   const isAuthPage = ['/', '/signup', '/findpassword', '/chat'].includes(
     location.pathname
   );
+  const isDashBoardPage = location.pathname.includes('/dashboard');
+
 
   if (loading) return <div>Loading...</div>;
 
@@ -42,7 +44,7 @@ function App() {
     <div>
       <Navbar />
       <div className="layout-row">
-        <Sidebar />
+        <Sidebar extraClass={isDashBoardPage ? 'sidebar--dashboard' : ''} />
         <div className="main-content">
           <Routes>
             <Route
