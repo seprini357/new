@@ -1,10 +1,15 @@
 // src/screens/Screen/index.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FormLogin } from '../../components/FormLogin';
+
+import FormLogin from '../../components/FormLogin/FormLogin';
+
+
+
+
 import './style.css';
 
-export const Screen = () => {
+const Login = () => {
   return (
     <div className="screen">
       <div className="div-2">
@@ -25,8 +30,9 @@ export const Screen = () => {
             text3="로그인"
             to="/dashboard"
           />
-        </div>
+          </div>
       </div>
     </div>
   );
 };
+export default Login;
