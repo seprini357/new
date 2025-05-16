@@ -6,8 +6,6 @@ const CITY = "Gyeongsan";
 
 const Weather = () => {
   const { weather } = useWeather(CITY);
-
-  // 값이 없으면 '-'로 표시
   const temp = weather && weather.main ? `${Math.round(weather.main.temp)}°C` : "-";
   const wind = weather && weather.wind ? `${weather.wind.speed} m/s` : "-";
 
