@@ -10,9 +10,6 @@ const Navbar = () => {
   return (
   <div className="topNavbar">
     <div className="logo">smartfarm <span className="logo-sub">ASAP</span></div>
-    <div className="right-icons">
-      <img className="chatbotButton" alt="chatbotButton" src={chatbotButton} onClick={handleChatbotClick}></img>
-    </div>
   </div>
 
   );

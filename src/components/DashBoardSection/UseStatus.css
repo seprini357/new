@@ -109,11 +109,13 @@
   flex: 1;
   flex-grow: 1;
   height: 334px;
+  display: flex;
+  flex-direction: column;
   position: relative;
 }
 
 .usage-status .title-cell-2 {
-  align-items: center;
+  position: static;
   background-color: #ffffff;
   border-bottom-style: solid;
   border-bottom-width: 1px;
@@ -125,12 +127,13 @@
   height: 54px;
   left: 0;
   padding: 16px 0px;
-  position: absolute;
   top: 0;
   width: 100%;
   white-space: nowrap;
   overflow: visible;
   text-overflow: initial;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .usage-status .column-title-wrapper {
@@ -203,6 +206,7 @@
 }
 
 .usage-status .body-cell-2 {
+  position: static;
   background-color: #ffffff;
   border-bottom-style: solid;
   border-bottom-width: 1px;
@@ -210,10 +214,10 @@
   border-right-style: solid;
   border-right-width: 1px;
   height: 40px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 103px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .usage-status .body-cell-3 {
@@ -450,4 +454,22 @@
   position: absolute;
   top: 473px;
   width: 56px;
+}
+
+/* 표 칸(행) 안의 상태 원 스타일 */
+.body-cell-2 .used-icon,
+.body-cell-2 .unused-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.body-cell-2 .used-icon {
+  background-color: #006639;
+}
+
+.body-cell-2 .unused-icon {
+  background-color: #c12525ed;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import useSensorStatus from "../../hooks/useSensorStatus";
 import "./UseStatus.css";
 
@@ -13,6 +13,10 @@ const devices = [
 ];
 
 const UsageStatus = () => {
+  // 각 장치별로 이전 상태를 기억
+  const prevStatuses = useRef(Array(devices.length).fill(false));
+
+  // 훅을 컴포넌트 최상위에서 순서대로 호출
   const pump = useSensorStatus("pump");
   const fan = useSensorStatus("fan");
   const motor = useSensorStatus("window-motor");
@@ -21,7 +25,15 @@ const UsageStatus = () => {
   const humidity = useSensorStatus("humidity-sensor");
   const co2 = useSensorStatus("co2-sensor");
 
-  const statuses = [pump, fan, motor, led, temp, humidity, co2];
+  const rawStatuses = [pump, fan, motor, led, temp, humidity, co2];
+
+  // 로딩 중이면 이전 상태를 유지
+  const statuses = rawStatuses.map((status, idx) => {
+    if (!status.loading) {
+      prevStatuses.current[idx] = status.isActive;
+    }
+    return { ...status, isActive: prevStatuses.current[idx] };
+  });
 
   return (
     <div className="usage-status">
@@ -50,9 +62,7 @@ const UsageStatus = () => {
           </div>
           {statuses.map((status, idx) => (
             <div className="body-cell-2" key={devices[idx].sensorId}>
-              {status.loading ? (
-                <div className="ellipse loading" title="로딩 중" />
-              ) : status.isActive ? (
+              {status.isActive ? (
                 <div className="used-icon" title="사용" />
               ) : (
                 <div className="unused-icon" title="미사용" />
@@ -60,11 +70,11 @@ const UsageStatus = () => {
             </div>
           ))}
         </div>
-        {/* 수동/자동 컬럼 (임시로 Cell text 유지) */}
+        {/* 수동/자동 컬럼 */}
         <div className="column-text">
           <div className="title-cell-3">
             <div className="text-wrapper-3">
-              <div className="column-title-2"> 수동/자동</div>
+              <div className="column-title-2">수동/자동</div>
             </div>
           </div>
           {devices.map((_, idx) => (
