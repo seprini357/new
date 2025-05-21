@@ -10,7 +10,7 @@ const Weather = () => {
   const wind = weather && weather.wind ? `${weather.wind.speed} m/s` : "-";
 
   return (
-    <div className="weather">
+
     <div className="overlap-5">
       <div className="overlap-6">
         <div className="weather-topic">현재기온</div>
@@ -23,7 +23,6 @@ const Weather = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

@@ -3,8 +3,6 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import DashBoard from './pages/DashBoard/DashBoard';
 import Setting from './pages/Setting';
 import SettingAccount from './pages/SettingAccount';
-import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
 import DataStatistics from './pages/DataStatistics';
 import useSensorMonitor from './hooks/useSensorMonitor';
 import usePushNotification from './hooks/usePushNotification';
@@ -23,8 +21,6 @@ function App() {
   const isAuthPage = ['/', '/signup', '/findpassword', '/chat'].includes(
     location.pathname
   );
-  const isDashBoardPage = location.pathname.includes('/dashboard');
-
 
   if (loading) return <div>Loading...</div>;
 
@@ -42,9 +38,7 @@ function App() {
   // 그 외 페이지는 Navbar + Sidebar 포함된 레이아웃으로 렌더링
   return (
     <div>
-      <Navbar />
       <div className="layout-row">
-        <Sidebar extraClass={isDashBoardPage ? 'sidebar--dashboard' : ''} />
         <div className="main-content">
           <Routes>
             <Route

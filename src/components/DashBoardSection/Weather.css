@@ -1,138 +1,52 @@
 .weather {
-  background-color: #ffffff;
+  background: transparent;
+  box-shadow: none;
   border-radius: 5px;
-  height: 173px;
-  left: 246px;
-  overflow: hidden;
-  position: absolute;
-  top: 91px;
-  width: 370px;
+  padding: 0;
+  margin: 0;
 }
 
-.overlap-5 {
-  height: 108px;
-  left: 11px;
-  position: absolute;
-  top: 24px;
-  width: 218px;
+.overlap-5, .overlap-6 {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
 }
 
-.overlap-6 {
-  height: 101px;
-  left: 16px;
-  position: absolute;
-  top: 0;
-  width: 202px;
-}
-
-.img {
-  height: 8px;
-  left: 97px;
-  position: absolute;
-  top: 11px;
-  width: 14px;
-}
-
-.weather-icon {
-  height: 83px;
-  left: 125px;
-  position: absolute;
-  top: 18px;
-  width: 77px;
-}
 .weather-topic {
-  color: #212121;
-  font-family: "Inter", Helvetica;
-  font-size: 23px;
-  font-weight: 700;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 0;
-  width: 148px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
-}
-
-.weather-data {
-  color: #212121;
-  font-family: "Inter", Helvetica;
-  font-size: 40px;
-  font-weight: 400;
-  left: 125px;
-  top: 18px;
-  width: 120px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.wind-speed {
-  color: #000000;
-  font-family: "Inter", Helvetica;
-  font-size: 20px;
-  font-weight: 400;
-  left: 237px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 37px;
-  width: 64px;
-}
-
-.weather-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 30px;
-  position: absolute;
-  left: -5px;
-  top: 50px;
-}
-
-.temperature {
-  font-size: 35px;
+  font-family: 'Inter', Helvetica;
+  font-size: 24px;
   font-weight: 700;
   color: #212121;
-  margin-bottom: 8px;
-}
-
-.city-name {
-  font-size: 30px;
-  font-weight: 700;
-  color: #212121;
-  margin-top: 0;
 }
 
 .weather-info {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  position: absolute;
-  left: 40px;
-  top: 34px;
-  gap: 8px;
+  gap: 12px;
 }
 
 .city-temp-row {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
+}
+
+.city-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #212121;
+}
+
+.temperature {
+  font-size: 36px;
+  font-weight: 700;
+  color: #212121;
 }
 
 .wind-speed-inline {
   font-size: 18px;
   font-weight: 400;
   color: #333;
-  margin-left: 70px;
-  margin-bottom: 50px;
 }
