@@ -2,9 +2,9 @@
   background-image: url(https://c.animaapp.com/kZX9QJ4w/img/rectangle-5-3.svg);
   background-size: 100% 100%;
   box-shadow: inset 0px 4px 4px #0000000d;
-  height: 62px;
+  height: 80%;
   position: relative;
-  width: 162px;
+  width: 160px;
 }
 
 .off-variant .manual-text-wrapper {
@@ -19,7 +19,7 @@
 
 .off-variant .manual-text {
   color: #ffffff;
-  font-family: "Inter", Helvetica;
+  font-family: 'Inter', Helvetica;
   font-size: 23px;
   font-weight: 400;
   left: 20px;
@@ -32,7 +32,7 @@
 
 .off-variant .auto-text {
   color: #212121;
-  font-family: "Inter", Helvetica;
+  font-family: 'Inter', Helvetica;
   font-size: 23px;
   font-weight: 400;
   left: 102px;

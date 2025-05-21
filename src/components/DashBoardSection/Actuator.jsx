@@ -38,28 +38,6 @@ const Actuator = () => {
           {pump.loading ? "..." : pump.isOn ? 'ON' : 'OFF'}
         </button>
       </div>
-
-      <div className="fan">
-        <div className="fan-text">냉각팬</div>
-        <button
-          className={`icon-button ${fan.isOn ? 'on' : 'off'}`}
-          onClick={() => isManual && fan.toggleSensor(!fan.isOn)}
-          disabled={!isManual || fan.loading}
-        >
-          {fan.loading ? "..." : fan.isOn ? 'ON' : 'OFF'}
-        </button>
-      </div>
-
-      <div className="window">
-        <div className="window-motor-text">창문 개폐 모터</div>
-        <button
-          className={`icon-button ${windowMotor.isOn ? 'on' : 'off'}`}
-          onClick={() => isManual && windowMotor.toggleSensor(!windowMotor.isOn)}
-          disabled={!isManual || windowMotor.loading}
-        >
-          {windowMotor.loading ? "..." : windowMotor.isOn ? 'ON' : 'OFF'}
-        </button>
-      </div>
     </div>
   );
 };
