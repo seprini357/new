@@ -4,7 +4,7 @@ import './Sidebar.css';
 import logoutButton from '../icons/lucide/logoutButton.svg';
 import Clock from './Clock';
 
-const Sidebar = ({ extraClass }) => {
+const Sidebar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -13,7 +13,7 @@ const Sidebar = ({ extraClass }) => {
   };
 
   return (
-    <div className={`sidebar ${extraClass ? extraClass : ''}`}>
+    <div className="sidebar">
       <ul>
         <li>
           <Link to="/DashBoard">실시간 대시보드</Link>
@@ -22,16 +22,15 @@ const Sidebar = ({ extraClass }) => {
           <Link to="/DataStatistics">데이터 통계</Link>
         </li>
         <li>
+          <Link to="/Chatting">챗봇</Link>
+        </li>
+        <li>
           <Link to="/Setting">설정</Link>
         </li>
-        <li className="empty"></li>
       </ul>
-
-      <div>
+      <div className="sidebar-clock">
         <Clock />
       </div>
-
-      {/* 로그아웃 버튼 */}
       <div
         className="logoutbutton"
         onClick={handleLogout}
