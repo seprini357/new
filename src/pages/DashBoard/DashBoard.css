@@ -174,57 +174,6 @@
   width: 1440px;
 }
 
-.dashboard .top-navigation {
-  background-color: #006639;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-color: #9e8f8f4c;
-  height: 70px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 1440px;
-}
-
-.dashboard .lucide-bell {
-  height: 30px;
-  left: 1366px;
-  position: absolute;
-  top: 22px;
-  width: 30px;
-}
-
-.dashboard .smart-farm-ASAP-2 {
-  color: #ffffff;
-  font-family: 'Inter', Helvetica;
-  font-size: 32px;
-  font-weight: 400;
-  left: 14px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 13px;
-  width: 209px;
-}
-
-.dashboard .notification-alarm {
-  left: 1379px !important;
-  position: absolute !important;
-  top: 17px !important;
-}
-
-.dashboard .logo {
-  color: #ffffff;
-  font-family: 'Inter', Helvetica;
-  font-size: 20px;
-  font-weight: 700;
-  left: 15px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 15px;
-  width: 215px;
-}
 
 .dashboard .text-wrapper-34 {
   color: #ffffff;

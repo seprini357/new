@@ -2,7 +2,6 @@ import React from 'react';
 import Actuator from '../../components/DashBoardSection/Actuator';
 import Ai from './sections/Ai/Ai';
 import Energy from './sections//Energy/Energy';
-import Soil from './sections/Soil/Soil';
 import Weather from '../../components/DashBoardSection/Weather';
 import UsageStatus from '../../components/DashBoardSection/UseStatus';
 import SensorMonitor from '../../components/DashBoardSection/SensorMonitor';
@@ -13,7 +12,6 @@ const DashBoard = () => {
   return (
     <div className="dashboard" data-model-id="38:787">
       <div className="div-3">
-        <Soil />
         <SensorMonitor />
         <Actuator />
         <Energy />

@@ -2,17 +2,14 @@
   width: 229px;
   background: #ffffff;
   position:relative;
-  height: 100vh;
-  max-height: 100vh;
+  height: 100%;
   padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-shrink: 0;
   transition: width 0.3s;
-}
-.sidebar--dashboard{
-  height: 150vh !important;
+  overflow:hidden;
 }
 
 @media (max-width: 1024px) {
@@ -111,12 +108,21 @@ ul li a.active{
   align-items: center;
   left: 50px;
   margin-left: 24px;
-  margin-bottom: 32px;
+  margin-bottom: 12px;
+  margin-top: 0;
   cursor: pointer;
 }
 
 .logoutbutton:hover,
 .logoutbutton:active{
   background: #ffffff;
+}
+
+.sidebar-clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 15px;
 }
 

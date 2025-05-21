@@ -2,14 +2,18 @@ import React from "react";
 import "./SettingAccount.css";
 import Settingbar from "../components/Settingbar";
 import syncIcon from "../icons/lucide/sync.svg";
+import { generateUniqueSerialIds } from "../utils/serialIdGenerator";
+
 const accounts = [
   {
-    email: "asap@gmail.com",
-    date: "2025-04-04",
-    role: "관리자",
-    active: true,
+    email: "",
+    date: "",
+    role: "",
+    id: "",
+    active: "",
   },
 ];
+const serialId = generateUniqueSerialIds(accounts);
 
 const SettingAccount = () => (
   <div className="settingbar-row">
@@ -32,6 +36,7 @@ const SettingAccount = () => (
           <th>계정</th>
           <th>등록일</th>
           <th>권한</th>
+          <th>일련번호</th>
           <th>활성화</th>
         </tr>
       </thead>
@@ -42,6 +47,7 @@ const SettingAccount = () => (
             <td>{acc.email}</td>
             <td>{acc.date}</td>
             <td>{acc.role}</td>
+            <td>{acc.id}</td>
             <td>
               {acc.active ? (
                 <span className="accountActive">
@@ -56,15 +62,14 @@ const SettingAccount = () => (
           </tr>
         ))}
         
-        {Array.from({ length: 7 - accounts.length }).map((_, i) => (
+        {Array.from({ length: 6 - accounts.length }).map((_, i) => (
           <tr key={`empty-${i}`}>
             <td><input type="checkbox" disabled /></td>
-            <td colSpan={4}></td>
+            <td colSpan={5}></td>
           </tr>
         ))}
       </tbody>
     </table>
-    <div className="accountPagination">&lt;&lt; &lt; 1 / 5 &gt; &gt;&gt;</div>
   </div>
   </div>
 );
